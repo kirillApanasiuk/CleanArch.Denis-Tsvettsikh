@@ -1,11 +1,12 @@
-﻿using Domain;
+﻿using DataAccess.Interface;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 
 namespace DataAccess
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : DbContext,IDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {

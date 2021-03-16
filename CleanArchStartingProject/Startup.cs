@@ -1,5 +1,6 @@
 using Application;
 using DataAccess;
+using DataAccess.Interface;
 using DomainServices.Implementation;
 using DomainServices.Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -29,13 +30,13 @@ namespace CleanArchStartingProject
                     builder
                     .AllowAnyOrigin()
                     .AllowAnyMethod()
-                    .AllowAnyHeader());
+                    .AllowAnyHeader()); 
             });
 
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IOrderDomainService, OrderDomainService>();
 
-            services.AddDbContext<AppDbContext>(opts => opts
+            services.AddDbContext<IDbContext,AppDbContext>(opts => opts
                 .UseSqlServer(
                     Configuration.GetConnectionString("sqlConnection"),
                     b=>b.MigrationsAssembly("DataAccess")

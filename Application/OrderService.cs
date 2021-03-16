@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using DataAccess;
+using DataAccess.Interface;
 using DomainServices.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
@@ -8,11 +8,11 @@ namespace Application
 {
     public class OrderService : IOrderService
     {
-        private readonly AppDbContext _dbContext;
+        private readonly IDbContext _dbContext;
         private readonly IMapper _mapper;
         private readonly IOrderDomainService _orderService;
 
-        public OrderService(AppDbContext dbContext,IMapper mapper,IOrderDomainService orderService)
+        public OrderService(IDbContext dbContext,IMapper mapper,IOrderDomainService orderService)
         {
             _dbContext = dbContext;
             _mapper = mapper;

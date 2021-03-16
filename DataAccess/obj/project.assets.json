@@ -2034,6 +2034,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "DataAccess.Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.4"
+        },
+        "compile": {
+          "bin/placeholder/DataAccess.Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccess.Interface.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -7159,6 +7173,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "DataAccess.Interface/1.0.0": {
+      "type": "project",
+      "path": "../DataAccess.Interfaces/DataAccess.Interface.csproj",
+      "msbuildProject": "../DataAccess.Interfaces/DataAccess.Interface.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -7167,6 +7186,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "DataAccess.Interface >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.4",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.4",
@@ -7199,6 +7219,9 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
+            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj": {
+              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj"
+            },
             "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj"
             }

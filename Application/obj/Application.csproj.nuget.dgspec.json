@@ -27,8 +27,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj": {
+                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj"
               },
               "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj": {
                 "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj",
-        "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj",
+        "projectName": "DataAccess.Interface",
+        "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj",
         "packagesPath": "C:\\Users\\User2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User2\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -108,14 +108,6 @@
         "netstandard2.1": {
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.Relational": {
-              "target": "Package",
-              "version": "[5.0.4, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[5.0.4, )"
             }
