@@ -26,7 +26,7 @@ namespace Application
 
             if(order == null)
             {
-
+                throw new EntityNotFoundException();
             }
 
             var dto = _mapper.Map<OrderDto>(order);

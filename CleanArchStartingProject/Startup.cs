@@ -21,15 +21,27 @@ namespace CleanArchStartingProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder =>
+                    builder
+                    .AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
+
             services.AddScoped<IOrderService, OrderService>();
+
             services.AddDbContext<AppDbContext>(opts => opts
                 .UseSqlServer(
                     Configuration.GetConnectionString("sqlConnection"),
                     b=>b.MigrationsAssembly("DataAccess")
                     )
             );
+
             services.AddAutoMapper(typeof(MapperProfile));
+
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +51,7 @@ namespace CleanArchStartingProject
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseExceptionHandlerMiddleware();
 
             app.UseHttpsRedirection();
 
