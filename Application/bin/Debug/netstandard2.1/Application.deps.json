@@ -10,7 +10,8 @@
       "Application/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
-          "DataAccess": "1.0.0"
+          "DataAccess": "1.0.0",
+          "DomainServices.Interfaces": "1.0.0"
         },
         "runtime": {
           "Application.dll": {}
@@ -1530,6 +1531,14 @@
         "runtime": {
           "Domain.dll": {}
         }
+      },
+      "DomainServices.Interfaces/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "runtime": {
+          "DomainServices.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -2427,6 +2436,11 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DomainServices.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

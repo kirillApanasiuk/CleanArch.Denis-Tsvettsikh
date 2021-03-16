@@ -2082,6 +2082,19 @@
         "runtime": {
           "bin/placeholder/Domain.dll": {}
         }
+      },
+      "DomainServices.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DomainServices.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DomainServices.Interfaces.dll": {}
+        }
       }
     }
   },
@@ -7252,12 +7265,18 @@
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "DomainServices.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../DomainServices.Interfaces/DomainServices.Interfaces.csproj",
+      "msbuildProject": "../DomainServices.Interfaces/DomainServices.Interfaces.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
-      "DataAccess >= 1.0.0"
+      "DataAccess >= 1.0.0",
+      "DomainServices.Interfaces >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -7288,6 +7307,9 @@
           "projectReferences": {
             "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj": {
               "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj"
+            },
+            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj"
             }
           }
         }

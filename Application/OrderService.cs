@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using DataAccess;
+using DomainServices.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Application
@@ -10,11 +10,13 @@ namespace Application
     {
         private readonly AppDbContext _dbContext;
         private readonly IMapper _mapper;
+        private readonly IOrderDomainService _orderService;
 
-        public OrderService(AppDbContext dbContext,IMapper mapper)
+        public OrderService(AppDbContext dbContext,IMapper mapper,IOrderDomainService orderService)
         {
             _dbContext = dbContext;
             _mapper = mapper;
+            _orderService = orderService;
         }
         public async Task<OrderDto> GetByIdAsync(int id)
         {
@@ -30,7 +32,7 @@ namespace Application
             }
 
             var dto = _mapper.Map<OrderDto>(order);
-            dto.Total = order.Items.Sum(x => x.Quantity * x.Product.Price);
+            dto.Total = _orderService.GetTotal(order);
             return dto;
         }
     }

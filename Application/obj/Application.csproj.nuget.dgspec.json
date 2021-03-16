@@ -29,6 +29,9 @@
             "projectReferences": {
               "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj": {
                 "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj"
+              },
+              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj"
               }
             }
           }
@@ -117,6 +120,62 @@
               "version": "[5.0.4, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj",
+        "projectName": "DomainServices.Interfaces",
+        "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\User2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
           "imports": [
             "net461",
             "net462",

@@ -1,5 +1,7 @@
 using Application;
 using DataAccess;
+using DomainServices.Implementation;
+using DomainServices.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +33,7 @@ namespace CleanArchStartingProject
             });
 
             services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IOrderDomainService, OrderDomainService>();
 
             services.AddDbContext<AppDbContext>(opts => opts
                 .UseSqlServer(
