@@ -4,12 +4,12 @@
     "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj": {
+    "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj",
-        "projectName": "DataAccess.Interface",
-        "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj",
+        "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj",
+        "projectName": "DataAccess.Interfaces",
+        "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj",
         "packagesPath": "C:\\Users\\User2\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
@@ -89,8 +89,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj": {
-                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj"
+              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj"
               },
               "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj": {
                 "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj"

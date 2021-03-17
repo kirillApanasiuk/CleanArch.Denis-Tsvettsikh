@@ -10,7 +10,7 @@
       "Application/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
-          "DataAccess.Interface": "1.0.0",
+          "DataAccess.Interfaces": "1.0.0",
           "DomainServices.Interfaces": "1.0.0"
         },
         "runtime": {
@@ -239,13 +239,13 @@
           }
         }
       },
-      "DataAccess.Interface/1.0.0": {
+      "DataAccess.Interfaces/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.4"
         },
         "runtime": {
-          "DataAccess.Interface.dll": {}
+          "DataAccess.Interfaces.dll": {}
         }
       },
       "Domain/1.0.0": {
@@ -426,7 +426,7 @@
       "path": "system.runtime.compilerservices.unsafe/5.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
     },
-    "DataAccess.Interface/1.0.0": {
+    "DataAccess.Interfaces/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

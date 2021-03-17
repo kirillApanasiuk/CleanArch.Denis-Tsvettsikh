@@ -3,12 +3,16 @@ using DataAccess;
 using DataAccess.Interface;
 using DomainServices.Implementation;
 using DomainServices.Interfaces;
+using Infrastructure.Implementation;
+using Infrastructure.Interfaces.Integrations;
+using Infrastructure.Interfaces.WebApp;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WebApp.Services;
 
 namespace CleanArchStartingProject
 {
@@ -33,19 +37,30 @@ namespace CleanArchStartingProject
                     .AllowAnyHeader()); 
             });
 
-            services.AddScoped<IOrderService, OrderService>();
+            #region Domain
             services.AddScoped<IOrderDomainService, OrderDomainService>();
+            #endregion
 
+            #region Infrastructure
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
             services.AddDbContext<IDbContext,AppDbContext>(opts => opts
                 .UseSqlServer(
                     Configuration.GetConnectionString("sqlConnection"),
                     b=>b.MigrationsAssembly("DataAccess")
                     )
             );
+            #endregion
 
+            #region Application
+            services.AddScoped<IOrderService, OrderService>();
+            #endregion
+
+            #region Frameworks
             services.AddAutoMapper(typeof(MapperProfile));
-
             services.AddControllers();
+            #endregion
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

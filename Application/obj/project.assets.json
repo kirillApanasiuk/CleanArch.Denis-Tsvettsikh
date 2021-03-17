@@ -260,7 +260,7 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "DataAccess.Interface/1.0.0": {
+      "DataAccess.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
@@ -268,10 +268,10 @@
           "Microsoft.EntityFrameworkCore": "5.0.4"
         },
         "compile": {
-          "bin/placeholder/DataAccess.Interface.dll": {}
+          "bin/placeholder/DataAccess.Interfaces.dll": {}
         },
         "runtime": {
-          "bin/placeholder/DataAccess.Interface.dll": {}
+          "bin/placeholder/DataAccess.Interfaces.dll": {}
         }
       },
       "Domain/1.0.0": {
@@ -940,10 +940,10 @@
         "version.txt"
       ]
     },
-    "DataAccess.Interface/1.0.0": {
+    "DataAccess.Interfaces/1.0.0": {
       "type": "project",
-      "path": "../DataAccess.Interfaces/DataAccess.Interface.csproj",
-      "msbuildProject": "../DataAccess.Interfaces/DataAccess.Interface.csproj"
+      "path": "../DataAccess.Interfaces/DataAccess.Interfaces.csproj",
+      "msbuildProject": "../DataAccess.Interfaces/DataAccess.Interfaces.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
@@ -959,7 +959,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
-      "DataAccess.Interface >= 1.0.0",
+      "DataAccess.Interfaces >= 1.0.0",
       "DomainServices.Interfaces >= 1.0.0"
     ]
   },
@@ -989,8 +989,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj": {
-              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interface.csproj"
+            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj"
             },
             "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj": {
               "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj"

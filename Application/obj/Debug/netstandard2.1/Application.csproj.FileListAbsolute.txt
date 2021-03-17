@@ -1,10 +1,8 @@
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\Application.deps.json
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\Application.dll
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\Application.pdb
-C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\DataAccess.Interface.dll
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\Domain.dll
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\DomainServices.Interfaces.dll
-C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\DataAccess.Interface.pdb
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\DomainServices.Interfaces.pdb
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\Domain.pdb
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\obj\Debug\netstandard2.1\Application.csprojAssemblyReference.cache
@@ -14,3 +12,5 @@ C:\Users\User2\source\repos\CleanArchStartingProject\Application\obj\Debug\netst
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\obj\Debug\netstandard2.1\Application.csproj.CopyComplete
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\obj\Debug\netstandard2.1\Application.dll
 C:\Users\User2\source\repos\CleanArchStartingProject\Application\obj\Debug\netstandard2.1\Application.pdb
+C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\DataAccess.Interfaces.dll
+C:\Users\User2\source\repos\CleanArchStartingProject\Application\bin\Debug\netstandard2.1\DataAccess.Interfaces.pdb
