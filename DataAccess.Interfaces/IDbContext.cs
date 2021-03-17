@@ -1,4 +1,4 @@
-﻿using Domain;
+﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
@@ -10,7 +10,7 @@ namespace DataAccess.Interface
         DbSet<Order> Orders { get; }
         DbSet<Product> Products { get; }
         public DbSet<OrderItem> OrderItems { get; set; }
-        Task<int> SaveChangesAsync(CancellationToken token);
+        Task<int> SaveChangesAsync(CancellationToken token=default);
     }
 
 }

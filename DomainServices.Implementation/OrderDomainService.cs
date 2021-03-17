@@ -1,6 +1,5 @@
-﻿using Domain;
+﻿using Domain.Entities;
 using DomainServices.Interfaces;
-using System;
 using System.Linq;
 
 namespace DomainServices.Implementation

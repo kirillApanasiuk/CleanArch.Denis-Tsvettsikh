@@ -1,4 +1,6 @@
 using Application;
+using ApplicationService.Interfaces;
+using ApplicationServices.Implementation;
 using DataAccess;
 using DataAccess.Interface;
 using DomainServices.Implementation;
@@ -6,12 +8,14 @@ using DomainServices.Interfaces;
 using Infrastructure.Implementation;
 using Infrastructure.Interfaces.Integrations;
 using Infrastructure.Interfaces.WebApp;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using UseCases.Order.Commands.Create;
 using WebApp.Services;
 
 namespace CleanArchStartingProject
@@ -53,7 +57,8 @@ namespace CleanArchStartingProject
             #endregion
 
             #region Application
-            services.AddScoped<IOrderService, OrderService>();
+            services.AddMediatR(typeof(CreateOrderCommand));
+            services.AddScoped<ISecurityService, SecurityService>();
             #endregion
 
             #region Frameworks
