@@ -16,11 +16,12 @@
   <ItemGroup>
     <ProjectReference Include="..\ApplicationService.Interfaces\ApplicationServices.Interfaces.csproj" />
     <ProjectReference Include="..\ApplicationServices.Implementation\ApplicationServices.Implementation.csproj" />
-    <ProjectReference Include="..\Application\UseCases.csproj" />
+    <ProjectReference Include="..\Application\Mobile.UseCases.csproj" />
+    <ProjectReference Include="..\Controllers\Mobile.Controllers.csproj" />
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
     <ProjectReference Include="..\DomainServices.Implementation\DomainServices.Implementation.csproj" />
     <ProjectReference Include="..\Infrastructure.Implementation\Email.Implementation.csproj" />
-    <ProjectReference Include="..\WebApp.Interfaces\WebApp.Interfaces.csproj" />
+    <ProjectReference Include="..\WebApi.Controllers\WebApi.Controllers.csproj" />
   </ItemGroup>
 
 

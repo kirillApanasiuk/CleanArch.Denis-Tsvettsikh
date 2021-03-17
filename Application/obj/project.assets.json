@@ -269,6 +269,16 @@
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "ApplicationServices.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/ApplicationServices.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ApplicationServices.Interfaces.dll": {}
+        }
+      },
       "DataAccess.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -967,6 +977,11 @@
         "version.txt"
       ]
     },
+    "ApplicationServices.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../ApplicationService.Interfaces/ApplicationServices.Interfaces.csproj",
+      "msbuildProject": "../ApplicationService.Interfaces/ApplicationServices.Interfaces.csproj"
+    },
     "DataAccess.Interfaces/1.0.0": {
       "type": "project",
       "path": "../DataAccess.Interfaces/DataAccess.Interfaces.csproj",
@@ -985,6 +1000,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "ApplicationServices.Interfaces >= 1.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "DataAccess.Interfaces >= 1.0.0",
       "DomainServices.Interfaces >= 1.0.0",
@@ -997,9 +1013,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Application\\UseCases.csproj",
-      "projectName": "UseCases",
-      "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Application\\UseCases.csproj",
+      "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Application\\Mobile.UseCases.csproj",
+      "projectName": "Mobile.UseCases",
+      "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Application\\Mobile.UseCases.csproj",
       "packagesPath": "C:\\Users\\User2\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Application\\obj\\",
       "projectStyle": "PackageReference",
@@ -1017,6 +1033,9 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
+            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\ApplicationService.Interfaces\\ApplicationServices.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\ApplicationService.Interfaces\\ApplicationServices.Interfaces.csproj"
+            },
             "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj": {
               "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj"
             },
