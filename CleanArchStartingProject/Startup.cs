@@ -3,8 +3,11 @@ using ApplicationService.Interfaces;
 using ApplicationServices.Implementation;
 using DataAccess;
 using DataAccess.Interface;
+using Delivery.Implementations;
+using DeliveryInterfaces;
 using DomainServices.Implementation;
 using DomainServices.Interfaces;
+using Hangfire;
 using Infrastructure.Implementation;
 using Infrastructure.Interfaces.Integrations;
 using Infrastructure.Interfaces.WebApp;
@@ -15,7 +18,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Mobile.UseCases.Order.BackgroundJobs;
 using UseCases.Order.Commands.Create;
+using WebApp.Interfaces;
 using WebApp.Services;
 
 namespace CleanArchStartingProject
@@ -48,12 +53,15 @@ namespace CleanArchStartingProject
             #region Infrastructure
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<ICurrentUserService, CurrentUserService>();
+            services.AddScoped<IBackgroundJobService, BackgroundJobService>();
             services.AddDbContext<IDbContext,AppDbContext>(opts => opts
                 .UseSqlServer(
                     Configuration.GetConnectionString("sqlConnection"),
-                    b=>b.MigrationsAssembly("DataAccess")
+                    b=>b.MigrationsAssembly("DataAccess.MsSql")
                     )
+
             );
+            services.AddScoped<IDeliveryService, DeliveryService>();
             #endregion
 
             #region Application
@@ -64,6 +72,11 @@ namespace CleanArchStartingProject
             #region Frameworks
             services.AddAutoMapper(typeof(MapperProfile));
             services.AddControllers();
+            services.AddHangfire(cfg => 
+                cfg.UseSqlServerStorage(Configuration.GetConnectionString("sqlConnection")
+                ));
+            services.AddHangfireServer();
+
             #endregion
 
         }
@@ -87,6 +100,12 @@ namespace CleanArchStartingProject
             {
                 endpoints.MapControllers();
             });
+
+            RecurringJob
+                .AddOrUpdate<UpdateDeliveryStatusJob>(
+                    "UpdateDeliveryStatusJob",
+                    (job)=>job.ExecuteAsync()
+                    ,Cron.Minutely);
         }
     }
 }

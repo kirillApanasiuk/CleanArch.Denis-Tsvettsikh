@@ -10,7 +10,7 @@
       "DataAccess/1.0.0": {
         "dependencies": {
           "DataAccess.Interfaces": "1.0.0",
-          "Domain": "1.0.0",
+          "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.4",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.4"
@@ -1506,19 +1506,19 @@
       },
       "DataAccess.Interfaces/1.0.0": {
         "dependencies": {
-          "Domain": "1.0.0",
+          "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.4"
         },
         "runtime": {
           "DataAccess.Interfaces.dll": {}
         }
       },
-      "Domain/1.0.0": {
+      "Entities/1.0.0": {
         "dependencies": {
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "runtime": {
-          "Domain.dll": {}
+          "Entities.dll": {}
         }
       }
     }
@@ -2402,7 +2402,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Domain/1.0.0": {
+    "Entities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

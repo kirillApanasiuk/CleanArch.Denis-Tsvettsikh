@@ -2038,7 +2038,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "Domain": "1.0.0",
+          "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.4"
         },
         "compile": {
@@ -2048,17 +2048,17 @@
           "bin/placeholder/DataAccess.Interfaces.dll": {}
         }
       },
-      "Domain/1.0.0": {
+      "Entities/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "System.ComponentModel.Annotations": "5.0.0"
         },
         "compile": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/Entities.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/Entities.dll": {}
         }
       }
     }
@@ -7178,35 +7178,40 @@
       "path": "../DataAccess.Interfaces/DataAccess.Interfaces.csproj",
       "msbuildProject": "../DataAccess.Interfaces/DataAccess.Interfaces.csproj"
     },
-    "Domain/1.0.0": {
+    "Entities/1.0.0": {
       "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
+      "path": "../Domain/Entities.csproj",
+      "msbuildProject": "../Domain/Entities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "DataAccess.Interfaces >= 1.0.0",
-      "Domain >= 1.0.0",
+      "Entities >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.4",
       "Microsoft.EntityFrameworkCore.Relational >= 5.0.4",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.4"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User2\\.nuget\\packages\\": {}
+    "C:\\Users\\User2\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj",
-      "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.MsSql.csproj",
+      "projectName": "DataAccess.MsSql",
+      "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\DataAccess.MsSql.csproj",
       "packagesPath": "C:\\Users\\User2\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\User2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7218,12 +7223,13 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "projectReferences": {
             "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj": {
               "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj"
             },
-            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj"
+            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Entities.csproj": {
+              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Entities.csproj"
             }
           }
         }
@@ -7236,6 +7242,7 @@
     },
     "frameworks": {
       "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -7265,7 +7272,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

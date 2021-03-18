@@ -7,7 +7,7 @@ using UseCases.Order.Queries.GetById;
 
 namespace CleanArchStartingProject.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("mobile/[controller]")]
     [ApiController]
     public class OrdersController : ControllerBase
     {

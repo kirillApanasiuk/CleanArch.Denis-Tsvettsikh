@@ -27,8 +27,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj"
+              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Entities.csproj": {
+                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Entities.csproj"
               }
             }
           }
@@ -92,8 +92,8 @@
               "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj": {
                 "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj"
               },
-              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj"
+              "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Entities.csproj": {
+                "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Entities.csproj"
               }
             }
           }
@@ -139,12 +139,12 @@
         }
       }
     },
-    "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj": {
+    "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\Entities.csproj",
         "packagesPath": "C:\\Users\\User2\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Domain\\obj\\",
         "projectStyle": "PackageReference",

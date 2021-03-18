@@ -11,5 +11,6 @@ namespace Domain.Entities
         public string Name { get; set; }
         [Column(TypeName ="decimal(5,2)")]
         public decimal Price { get; set; }
+        public double Weight { get; set; }
     }
 }

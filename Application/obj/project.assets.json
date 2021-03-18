@@ -283,7 +283,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "Domain": "1.0.0",
+          "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.4"
         },
         "compile": {
@@ -293,30 +293,60 @@
           "bin/placeholder/DataAccess.Interfaces.dll": {}
         }
       },
-      "Domain/1.0.0": {
+      "Delivery.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "System.ComponentModel.Annotations": "5.0.0"
-        },
         "compile": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/Delivery.Interfaces.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Domain.dll": {}
+          "bin/placeholder/Delivery.Interfaces.dll": {}
         }
       },
       "DomainServices.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "Domain": "1.0.0"
+          "Entities": "1.0.0"
         },
         "compile": {
           "bin/placeholder/DomainServices.Interfaces.dll": {}
         },
         "runtime": {
           "bin/placeholder/DomainServices.Interfaces.dll": {}
+        }
+      },
+      "Email.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Email.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Email.Interfaces.dll": {}
+        }
+      },
+      "Entities/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Entities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entities.dll": {}
+        }
+      },
+      "WebApp.Interfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/WebApp.Interfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApp.Interfaces.dll": {}
         }
       }
     }
@@ -987,15 +1017,30 @@
       "path": "../DataAccess.Interfaces/DataAccess.Interfaces.csproj",
       "msbuildProject": "../DataAccess.Interfaces/DataAccess.Interfaces.csproj"
     },
-    "Domain/1.0.0": {
+    "Delivery.Interfaces/1.0.0": {
       "type": "project",
-      "path": "../Domain/Domain.csproj",
-      "msbuildProject": "../Domain/Domain.csproj"
+      "path": "../DeliveryInterfaces/Delivery.Interfaces.csproj",
+      "msbuildProject": "../DeliveryInterfaces/Delivery.Interfaces.csproj"
     },
     "DomainServices.Interfaces/1.0.0": {
       "type": "project",
       "path": "../DomainServices.Interfaces/DomainServices.Interfaces.csproj",
       "msbuildProject": "../DomainServices.Interfaces/DomainServices.Interfaces.csproj"
+    },
+    "Email.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../Email.Interfaces/Email.Interfaces.csproj",
+      "msbuildProject": "../Email.Interfaces/Email.Interfaces.csproj"
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Entities.csproj",
+      "msbuildProject": "../Domain/Entities.csproj"
+    },
+    "WebApp.Interfaces/1.0.0": {
+      "type": "project",
+      "path": "../WebApp.Interfaces/WebApp.Interfaces.csproj",
+      "msbuildProject": "../WebApp.Interfaces/WebApp.Interfaces.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -1003,12 +1048,16 @@
       "ApplicationServices.Interfaces >= 1.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
       "DataAccess.Interfaces >= 1.0.0",
+      "Delivery.Interfaces >= 1.0.0",
       "DomainServices.Interfaces >= 1.0.0",
-      "MediatR >= 9.0.0"
+      "Email.Interfaces >= 1.0.0",
+      "MediatR >= 9.0.0",
+      "WebApp.Interfaces >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User2\\.nuget\\packages\\": {}
+    "C:\\Users\\User2\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -1019,8 +1068,12 @@
       "packagesPath": "C:\\Users\\User2\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Application\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\User2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1032,6 +1085,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "projectReferences": {
             "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\ApplicationService.Interfaces\\ApplicationServices.Interfaces.csproj": {
               "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\ApplicationService.Interfaces\\ApplicationServices.Interfaces.csproj"
@@ -1039,8 +1093,17 @@
             "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj": {
               "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DataAccess.Interfaces\\DataAccess.Interfaces.csproj"
             },
+            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DeliveryInterfaces\\Delivery.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DeliveryInterfaces\\Delivery.Interfaces.csproj"
+            },
             "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj": {
               "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\DomainServices.Interfaces\\DomainServices.Interfaces.csproj"
+            },
+            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Email.Interfaces\\Email.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\Email.Interfaces\\Email.Interfaces.csproj"
+            },
+            "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\WebApp.Interfaces\\WebApp.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\User2\\source\\repos\\CleanArchStartingProject\\WebApp.Interfaces\\WebApp.Interfaces.csproj"
             }
           }
         }
@@ -1053,6 +1116,7 @@
     },
     "frameworks": {
       "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -1078,7 +1142,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

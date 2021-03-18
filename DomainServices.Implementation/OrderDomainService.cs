@@ -6,9 +6,16 @@ namespace DomainServices.Implementation
 {
     public class OrderDomainService : IOrderDomainService
     {
-        public decimal GetTotal(Order order)
+        public decimal GetTotal(Order order,CalculateDeliveryCost calcDeliveryCost)
         {
-            return order.Items.Sum(x => x.Quantity * x.Product.Price);
+            var totalPrice =  order.Items.Sum(x => x.Quantity * x.Product.Price);
+            decimal deliveryCost = 0;
+            if(totalPrice < 1000) 
+            {
+                var totalWeight = order.Items.Sum(x => x.Quantity * x.Product.Weight);
+                deliveryCost = calcDeliveryCost(totalWeight);
+            }
+            return totalPrice + deliveryCost;
         }
     }
 }

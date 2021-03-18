@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.7.19" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.4">
@@ -18,10 +19,12 @@
     <ProjectReference Include="..\ApplicationServices.Implementation\ApplicationServices.Implementation.csproj" />
     <ProjectReference Include="..\Application\Mobile.UseCases.csproj" />
     <ProjectReference Include="..\Controllers\Mobile.Controllers.csproj" />
-    <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\DataAccess\DataAccess.MsSql.csproj" />
+    <ProjectReference Include="..\Delivery.Implementations\Delivery.MyDelivery.csproj" />
     <ProjectReference Include="..\DomainServices.Implementation\DomainServices.Implementation.csproj" />
-    <ProjectReference Include="..\Infrastructure.Implementation\Email.Implementation.csproj" />
+    <ProjectReference Include="..\Infrastructure.Implementation\Email.MailHandler.csproj" />
     <ProjectReference Include="..\WebApi.Controllers\WebApi.Controllers.csproj" />
+    <ProjectReference Include="..\WebApp.Interfaces\WebApp.Interfaces.csproj" />
   </ItemGroup>
 
 
